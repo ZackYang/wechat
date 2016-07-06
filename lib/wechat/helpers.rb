@@ -6,6 +6,8 @@ module Wechat
                  else
                    controller.request.original_url
                  end
+                 
+      puts controller
       js_hash = controller.wechat.jsapi_ticket.signature(page_url)
       config_js = <<-WECHAT_CONFIG_JS
 wx.config({

@@ -43,6 +43,8 @@ module Wechat
         end
         result = Digest::SHA1.hexdigest pairs.join('&')
         params.merge(signature: result)
+      rescue
+        puts "aaaaaaaaaaaaa"
       end
 
       protected
